@@ -16,7 +16,6 @@ Results from running the nexflow pipeline will be in the "results" directory.
 
 - Install Docker
 - Install Nextflow
-- Install Bowtie2 (https://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 - Download Human genome Bowtie2 index files from directory under this link:
 https://drive.google.com/drive/folders/1Ez6-pZeoBVSJuzAhqKcNI31nkJrZALwv?usp=share_link
 - The index files should be saved in the TCGA_pipeline directory.
