@@ -19,7 +19,7 @@ In requested step of comparison between sgRNA fasta names and genes to which the
 https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 - Index file locally using 'bowtie2-build [human_fasta] [index_prefix]' - it takes long time, and one should have workstation with a lot of threads to faster it.
 - Modify the index_prefix in the nextflow command below to match the prefic above or use the same index_prefix as proposed so: "grch38prim"
-- The Annotation file and index files should be saved in the TCGA_pipeline directory.
+- The index files should be saved in the TCGA_pipeline directory.
 
 Notes: I was not able to test the pipeline with the indexing stage, on my laptop the indexing step was taking over 3 hours. I have made the indexing on another workstation with 20 threads and copied the index files. I do not know the place where I can share such a huge files for free. It is more than 1GB and git allows only 1GB.
 
