@@ -98,7 +98,7 @@ docker run -it tcga_pipeline
 
 This command starts a new Docker container using the 'tcga_pipeline' image and opens an interactive terminal inside the container.
    
-3. **Run the Pipeline**:
+4. **Run the Pipeline**:
    ```
    nextflow run main.nf --fasta library.fa --index_prefix grch38prim --gffzipped Homo_sapiens.GRCh38.109.gff3.gz --expression_script retrieve_expression.R --samples TCGA-A7-A13D-01A-13R-A12P-07,TCGA-E9-A1RH-11A-34R-A169-07
    ```
