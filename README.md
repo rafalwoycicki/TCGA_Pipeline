@@ -11,10 +11,12 @@ This pipeline is designed to process and analyze gene expression data from The C
 - Install Docker
 - Install Nextflow
 - Install Bowtie2 (https://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+- Download Annotation file from this link https://ftp.ensembl.org/pub/release-109/gff3/homo_sapiens/Homo_sapiens.GRCh38.109.gff3.gz
 - Download Human genome fasta file from this link:
 https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 - Index file locally using 'bowtie2-build [human_fasta] [index_prefix]' - it takes long time, and one should have workstation with a lot of threads to faster it.
 - Modify the index_prefix in the nextflow command below to match the prefic above or use the same index_prefix as proposed so: "grch38prim"
+- The Annotation file and index files should be saved in the TCGA_pipeline directory.
 Notes: I was not able to test the pipeline with the indexing stage, on my laptop the indexing step was taking over 3 hours.
 
 ## Dependencies
