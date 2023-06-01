@@ -17,13 +17,11 @@ Results from running the nexflow pipeline will be in the "results" directory.
 - Install Docker
 - Install Nextflow
 - Install Bowtie2 (https://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
-- Download Human genome fasta file from this link:
-https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
-- Index file locally using 'bowtie2-build [human_fasta] [index_prefix]' - it takes long time, and one should have workstation with a lot of threads to faster it.
-- Modify the index_prefix in the nextflow command below to match the prefic above or use the same index_prefix as proposed so: "grch38prim"
+- Download Human genome Bowtie2 index files from directory under this link:
+https://drive.google.com/drive/folders/1Ez6-pZeoBVSJuzAhqKcNI31nkJrZALwv?usp=share_link
 - The index files should be saved in the TCGA_pipeline directory.
 
-Notes: I was not able to test the pipeline with the indexing stage, on my laptop the indexing step was taking over 3 hours. I have made the indexing on another workstation with 20 threads and copied the index files. I do not know the place where I can share such a huge files for free. It is more than 1GB and git allows only 1GB.
+Notes: I was not able to test the pipeline with the indexing stage, on my laptop the indexing step was taking over 3 hours. I have made the indexing on another workstation with 20 threads and copied the index files.
 
 ## Dependencies contenarized:
 This pipeline depends on several bioinformatics tools, including:
