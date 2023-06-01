@@ -10,6 +10,7 @@ This pipeline is designed to process and analyze gene expression data from The C
 
 - Docker
 - Nextflow
+- Download Human genome index from this link: 
 
 ## Dependencies
 This pipeline depends on several bioinformatics tools, including:
