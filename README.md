@@ -10,6 +10,8 @@ The attched "expression_matrix.txt" file consist of expression of genes in speci
 
 In requested step of comparison between sgRNA fasta names and genes to which these sgRNAs were mapped, I did not make any filtering, for the expression matrix I have taken all the genes to which sgRNA mapped. This could reveal possible off target effects. See file "compared_genes.txt".
 
+Results from running the nexflow pipeline will be in the "results" directory.
+
 ## Prerequisites
 
 - Install Docker
@@ -23,7 +25,7 @@ https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/dna/Homo_sapiens.GRCh
 
 Notes: I was not able to test the pipeline with the indexing stage, on my laptop the indexing step was taking over 3 hours. I have made the indexing on another workstation with 20 threads and copied the index files. I do not know the place where I can share such a huge files for free. It is more than 1GB and git allows only 1GB.
 
-## Dependencies
+## Dependencies contenarized:
 This pipeline depends on several bioinformatics tools, including:
 
 - Bowtie2
