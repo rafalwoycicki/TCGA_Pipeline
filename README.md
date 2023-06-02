@@ -81,9 +81,8 @@ The pipeline produces several output files:
 
 1. **Clone the Repository**:
    ```
-   git clone <repository-url>
+   git clone https://github.com/rafalwoycicki/TCGA_Pipeline.git
    ```
-   Replace `<repository-url>` with the URL of your GitHub repository.
 
 2. **Navigate to the Repository Directory**:
    ```
