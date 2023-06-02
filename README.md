@@ -31,7 +31,7 @@ This pipeline depends on several bioinformatics tools, including:
 - SAMtools
 - Gawk
 - Bedtools
-- R with Bioconductor and packages (TCGAbiolinks and GenomicFeatures)
+- R with Bioconductor and packages (TCGAbiolinks, GenomicFeatures and SummarizedExperiment)
 
 ## Overview
 
