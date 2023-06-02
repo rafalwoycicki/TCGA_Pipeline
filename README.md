@@ -18,7 +18,7 @@ Results from running the nexflow pipeline will be in the "results" directory.
 - Install Nextflow
 - Download Human genome Bowtie2 index files from directory under this link:
 https://drive.google.com/drive/folders/1Ez6-pZeoBVSJuzAhqKcNI31nkJrZALwv?usp=share_link
-These indexes were made on the basis of Human Genome Sequence primary assembly downloaded from Ensembl:
+These indexes were made on the basis of Human Genome Sequence GRCh38 primary assembly downloaded from Ensembl:
 https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 - The index files should be saved in the TCGA_pipeline directory.
 
