@@ -10,7 +10,7 @@ The attched "expression_matrix.txt" file consist of expression of genes in speci
 
 In requested step of comparison between sgRNA fasta names and genes to which these sgRNAs were mapped, I did not make any filtering, for the expression matrix I have taken all the genes to which sgRNA mapped. This could reveal possible off target effects. See file "compared_genes.txt".
 
-Results from running the nexflow pipeline will be in the "results" directory.
+Results from running the nexflow pipeline will be saved to the "results" directory.
 
 ## Prerequisites
 
