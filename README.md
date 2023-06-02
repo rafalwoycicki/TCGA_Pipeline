@@ -2,7 +2,7 @@
 # Documentation for TCGA Analysis Pipeline
 
 ## Introduction
-Dockerized pipeline to retrieve gene expression of sgRNA targets from TCGA db.
+Dockerized pipeline to retrieve gene expression (including pseudoenes and noncoding RNA genes) of sgRNA targets from TCGA db.
 
 The pipeline is implemented using Nextflow, a data-driven computational workflow framework. It utilizes Docker containers for managing software dependencies, ensuring reproducibility and portability.
 
