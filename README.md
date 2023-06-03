@@ -8,7 +8,7 @@ The pipeline is implemented using Nextflow, a data-driven computational workflow
 
 The attched "expression_matrix.txt" file consist of expression of genes in specific TGCA samples ("TCGA-A7-A13D-01A-13R-A12P-07" and "TCGA-E9-A1RH-11A-34R-A169-07" from TCGA-BRCA dataset.) found by mapping sgRNAs to human genome GRCh38 with Ensembl annotation v. 109.
 
-In requested step of comparison between sgRNA fasta names and genes to which these sgRNAs were mapped, I did not make any filtering, for the expression matrix I have taken all the genes to which sgRNA mapped. This could reveal possible off target effects. See file "compared_genes.txt".
+In requested step of comparison between sgRNA fasta names and genes to which these sgRNAs were mapped, I did not make any filtering, for the expression matrix I have taken all the genes to which sgRNA mapped. This could reveal possible off target effects. See file "compared_genes.txt". The file contains 3 columns: 1st: Original FASTA file gene name of the sgRNA, 2nd: Gene name of the gene to which sgRNA was mapped, 3rd: Ensembl ID of the gene to which sgRNA was mapped.
 
 Results from running the nexflow pipeline will be saved to the "results" directory.
 
