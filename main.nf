@@ -112,7 +112,7 @@ process CompareGeneNames {
 
     script:
     """
-    gawk -v FS="\t" -v OFS="\t" '{split(\$4,a,"|"); split(\$11,b,";");print a[3], b[2], b[1]}' ${annotated_bed} > compared_genes.txt
+    gawk -v FS="\t" -v OFS="\t" '{split(\$4, a, "|"); split(\$11, b, ";"); print a[3], b[2], b[1]}' ${annotated_bed} | sort | uniq | gawk 'BEGIN{print "sgRNA_GeneName", "GeneName_mapped", "EnsemblID_mapped"} {print}' > compared_genes.txt
     """
 }
 
@@ -128,7 +128,7 @@ process ExtractGeneIDs {
 
     script:
     """
-    cut -f3 ${compared_genes} | sort | uniq > gene_ids.txt
+    cut -f3 ${compared_genes} | tail -n +2 | sort | uniq > gene_ids.txt
     """
 }
 
