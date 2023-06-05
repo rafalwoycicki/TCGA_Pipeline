@@ -79,6 +79,8 @@ The pipeline produces several output files:
 
 ## Usage
 
+0. **Install git-lfs
+
 1. **Clone the Repository**:
    ```
    git clone https://github.com/rafalwoycicki/TCGA_Pipeline.git
@@ -93,7 +95,18 @@ The pipeline produces several output files:
    
 4. **Docker Setup
 
-This pipeline uses Docker to manage these dependencies. To create a Docker image for this pipeline, a Dockerfile is provided in the repository. Here's how you can build and use the Docker image.
+This pipeline uses Docker to manage these dependencies. Remember to have Docker running.
+
+There are two ways of accessing Docker image:
+
+a. **You can load a docker image present in the directory:
+
+```
+gunzip tcga_pipeline.tar.gz
+docker load -i tcga_pipeline.tar
+```
+
+b. **To create a Docker image for this pipeline, a Dockerfile is provided in the repository. Here's how you can build and use the Docker image.
 
 **Build Docker Image**: Navigate to the directory containing the Dockerfile and run the following command to build the Docker image:
 
