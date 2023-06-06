@@ -10,6 +10,10 @@ The attched "expression_matrix.txt" file consist of expression of genes in speci
 
 In requested step of comparison between sgRNA fasta names and genes to which these sgRNAs were mapped, I did not make any filtering, for the expression matrix I have taken all the genes to which sgRNA mapped. This could reveal possible off target effects. See file "compared_genes.txt". The file contains 3 columns: 1st: Original FASTA file gene name of the sgRNA, 2nd: Gene name of the gene to which sgRNA was mapped, 3rd: Ensembl ID of the gene to which sgRNA was mapped.
 
+In the files attached you can see also file: expression_matrix_annotated.txt, this is the expression matrix having additional gene names annotations from input sgRNAs (as well as gene names of mapped genes). Unfortunately I was not able to make my scripts working in Nexflow for that process, I was only able to get it on the command line. (in Nexflow version all the references to columns should have "\" in front to be properly recognized as such (here is the Nexflow version showed and it will give error in command line, so one should remove extra "\" before $.
+
+gawk 'BEGIN{FS=OFS="\t"; getline expression_column_names < "'${expression_matrix}'"; getline compared_column_names < "'${compared_genes}'"; print compared_column_names, expression_column_names} NR==FNR && NR>1{a[\$3]=(\$3 in a) ? a[\$3]"\n"\$1"\t"\$2 : \$1"\t"\$2} NR!=FNR && \$1 in a{split(a[\$1], mappings, "\n"); for (i in mappings) print mappings[i], \$0}' ${compared_genes} ${expression_matrix} | gawk '!seen[\$0]++' > expression_matrix_annotated.txt
+
 Results from running the nexflow pipeline will be saved to the "results" directory.
 
 ## Prerequisites
