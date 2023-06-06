@@ -12,7 +12,9 @@ In requested step of comparison between sgRNA fasta names and genes to which the
 
 In the files attached you can see also file: expression_matrix_annotated.txt, this is the expression matrix having additional gene names annotations from input sgRNAs (as well as gene names of mapped genes). Unfortunately I was not able to make my scripts working in Nexflow for that process, I was only able to get it on the command line. (in Nexflow version all the references to columns should have "\" in front to be properly recognized as such (here is the Nexflow version showed and it will give error in command line, so one should remove extra "\" before $.
 
+```
 gawk 'BEGIN{FS=OFS="\t"; getline expression_column_names < "'${expression_matrix}'"; getline compared_column_names < "'${compared_genes}'"; print compared_column_names, expression_column_names} NR==FNR && NR>1{a[\$3]=(\$3 in a) ? a[\$3]"\n"\$1"\t"\$2 : \$1"\t"\$2} NR!=FNR && \$1 in a{split(a[\$1], mappings, "\n"); for (i in mappings) print mappings[i], \$0}' ${compared_genes} ${expression_matrix} | gawk '!seen[\$0]++' > expression_matrix_annotated.txt
+```
 
 Results from running the nexflow pipeline will be saved to the "results" directory.
 
