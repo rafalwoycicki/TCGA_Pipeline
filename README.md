@@ -6,7 +6,7 @@ Dockerized pipeline to retrieve gene expression (including pseudoenes and noncod
 
 The pipeline is implemented using Nextflow, a data-driven computational workflow framework. It utilizes Docker containers for managing software dependencies, ensuring reproducibility and portability.
 
-The attched "expression_matrix.txt" file consist of expression of genes in specific TGCA samples ("TCGA-A7-A13D-01A-13R-A12P-07" and "TCGA-E9-A1RH-11A-34R-A169-07" from TCGA-BRCA dataset.) found by mapping sgRNAs to human genome GRCh38 with Ensembl annotation v. 109.
+The attched "expression_matrix.txt" file consist of expression of genes in specific TGCA samples ("TCGA-A7-A13D-01A-13R-A12P-07" and "TCGA-E9-A1RH-11A-34R-A169-07" from TCGA-BRCA dataset.) found by mapping sgRNAs to human genome GRCh38 with Ensembl annotation v. 109. First column are Ensembl IDs of mapped genes.
 
 In requested step of comparison between sgRNA fasta names and genes to which these sgRNAs were mapped, I did not make any filtering, for the expression matrix I have taken all the genes to which sgRNA mapped. This could reveal possible off target effects. See file "compared_genes.txt". The file contains 3 columns: 1st: Original FASTA file gene name of the sgRNA, 2nd: Gene name of the gene to which sgRNA was mapped, 3rd: Ensembl ID of the gene to which sgRNA was mapped.
 
@@ -79,8 +79,6 @@ The pipeline produces several output files:
 
 ## Usage
 
-0. **Install git-lfs
-
 1. **Clone the Repository**:
    ```
    git clone https://github.com/rafalwoycicki/TCGA_Pipeline.git
@@ -96,17 +94,7 @@ The pipeline produces several output files:
 4. **Docker Setup
 
 This pipeline uses Docker to manage these dependencies. Remember to have Docker running.
-
-There are two ways of accessing Docker image:
-
-a. **You can load a docker image present in the directory:
-
-```
-gunzip tcga_pipeline.tar.gz
-docker load -i tcga_pipeline.tar
-```
-
-b. **To create a Docker image for this pipeline, a Dockerfile is provided in the repository. Here's how you can build and use the Docker image.
+To create a Docker image for this pipeline, a Dockerfile is provided in the repository. Here's how you can build and use the Docker image.
 
 **Build Docker Image**: Navigate to the directory containing the Dockerfile and run the following command to build the Docker image:
 
