@@ -95,9 +95,9 @@ The pipeline produces several output files:
    cd TCGA_Pipeline
    ```
    
-3. **Place the index_prefix files in the directory.
+3. **Place the index_prefix files in the directory**.
    
-4. **Docker Setup
+4. **Docker Setup**
 
 This pipeline uses Docker to manage these dependencies. Remember to have Docker running.
 To create a Docker image for this pipeline, a Dockerfile is provided in the repository. Here's how you can build and use the Docker image.
